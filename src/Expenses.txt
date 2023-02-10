@@ -1,8 +1,4 @@
-import './App.css';
-import ExpenseItem from './components/ExpenseItem';
-
-function App() {
-  const expenses = [
+const expenses = [
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -23,14 +19,3 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-  return (
-    <div>
-      <h2>Let's get started</h2>
-      {expenses.map((expenses) => {
-        return <ExpenseItem key={expenses.id} expenses={expenses} />;
-      })}
-    </div>
-  );
-}
-
-export default App;

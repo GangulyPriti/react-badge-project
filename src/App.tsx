@@ -1,8 +1,10 @@
+import * as React from 'react';
+// import ReactDOM from 'react-dom/client';
 import './App.css';
-import ExpenseItem from './components/ExpenseItem';
+import Expenses from './components/Expenses/Expenses';
 
-function App() {
-  const expenses = [
+const App = () => {
+  const expenses: any = [
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -24,13 +26,11 @@ function App() {
     },
   ];
   return (
-    <div>
+    <div className="App-header">
       <h2>Let's get started</h2>
-      {expenses.map((expenses) => {
-        return <ExpenseItem key={expenses.id} expenses={expenses} />;
-      })}
+      <Expenses expenses={expenses} />
     </div>
   );
-}
+};
 
 export default App;

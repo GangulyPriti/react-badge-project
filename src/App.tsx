@@ -36,6 +36,7 @@ const App = () => {
   };
   console.log(expenses);
   return (
+    // <div className="App-header">
     <div className="App-header">
       <NewExpense onSaveExpenseData={onSaveExpenseData} />
       <Expenses expenses={expenses} />
